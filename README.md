@@ -43,6 +43,13 @@ This is a simple and responsive **Expense Tracker** application built using **HT
 
 ---
 
+## Live Demo
+
+Click here to view the live site
+https://expense-tracker-ecru-five.vercel.app/
+
+---
+
 ## How to Run the Project Locally
 
 1. Clone the repository:
@@ -50,3 +57,7 @@ This is a simple and responsive **Expense Tracker** application built using **HT
 ```bash
 git clone https://github.com/SandrineMerci/expense-tracker.git
 cd expense-tracker
+
+
+
+

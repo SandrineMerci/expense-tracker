@@ -21,12 +21,11 @@ This is a simple and responsive **Expense Tracker** application built using **HT
 
 ## Screenshot
 
-| Desktop View | Mobile View |
-|--------------|-------------|
-| ![Desktop](<img width="944" alt="expense" src="https://github.com/user-attachments/assets/d4eba2a1-cf60-40fa-af2c-57a7ee030532" />) | ![Mobile](screenshots/mobile.png) |
+**Desktop View**
 
+<img width="944" alt="expense" src="https://github.com/user-attachments/assets/d4eba2a1-cf60-40fa-af2c-57a7ee030532" />
 
-
+**Mobile View** 
 
 ---
 
@@ -53,13 +52,6 @@ https://expense-tracker-ecru-five.vercel.app/
 
 ---
 
-## How to Run the Project Locally
-
-1. Clone the repository:
-
-```bash
-git clone https://github.com/SandrineMerci/expense-tracker.git
-cd expense-tracker
 
 
 

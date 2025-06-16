@@ -10,7 +10,14 @@ form.addEventListener('submit', function (e) {
   e.preventDefault();
 
   const description = document.getElementById('description').value.trim();
-  const amount = parseFloat(document.getElementById('amount').value);
+  //const amount = parseFloat(document.getElementById('amount').value);
+  const amountInput = parseFloat(document.getElementById('amount').value);
+const type = document.querySelector('input[name="type"]:checked').value;
+
+const amount = type === 'expense'
+  ? -Math.abs(amountInput)
+  : Math.abs(amountInput);
+
   const date = document.getElementById('date').value;
 
   if (!description || isNaN(amount) || !date) {
@@ -51,7 +58,7 @@ function renderExpenses() {
 
     li.innerHTML = `
       <div>
-        <strong>${symbol} ${type}</strong>: ${exp.description} - ${Math.abs(exp.amount)} RWF on ${exp.date}
+        <strong>${symbol} ${type}</strong>: ${exp.description} : ${Math.abs(exp.amount)} RWF on ${exp.date}
       </div>
       <div>
         <button onclick="editExpense(${exp.id})">Edit</button>

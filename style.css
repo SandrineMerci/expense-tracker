@@ -23,7 +23,7 @@ header {
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
-/* Layout */
+/* Main Layout */
 main {
   flex: 1;
   padding: 2rem 1rem;
@@ -33,7 +33,7 @@ main {
   gap: 2rem;
 }
 
-/* Section Cards */
+/* Sections */
 section {
   background: white;
   border-radius: 12px;
@@ -41,7 +41,6 @@ section {
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
 }
 
-/* Titles */
 h2 {
   margin-bottom: 1rem;
   font-size: 1.3rem;
@@ -51,23 +50,34 @@ h2 {
 
 /* Form */
 form {
+  width: 100%;
+}
+
+fieldset {
+  border: none;
+  padding: 0;
   display: flex;
   flex-direction: column;
-  gap: 0.8rem;
+  gap: 1rem;
+}
+
+legend {
+  font-weight: bold;
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+}
+
+label {
+  font-size: 0.95rem;
+  font-weight: 500;
 }
 
 input, select {
   padding: 0.6rem;
   width: 100%;
-  min-width: 300px;
   border: 1px solid #ccc;
   border-radius: 8px;
   font-size: 1rem;
-}
-
-input::placeholder {
-  font-size: 0.95rem;
-  color: #666;
 }
 
 input:focus, select:focus {
@@ -75,6 +85,31 @@ input:focus, select:focus {
   outline: none;
 }
 
+input::placeholder {
+  font-size: 0.95rem;
+  color: #666;
+}
+
+/* Radio Buttons */
+.type-toggle {
+  display: flex;
+  gap: 1rem;
+  padding: 0.3rem 0.4rem;
+  background-color: #f1f1f1;
+  border-radius: 8px;
+}
+
+.type-toggle label {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.type-toggle input[type="radio"] {
+  accent-color: #1e90ff;
+}
+
+/* Buttons */
 button {
   padding: 0.6rem 1.2rem;
   border: none;
@@ -90,12 +125,17 @@ button:hover {
   background-color: #0072cc;
 }
 
-/* Filter section */
-.filter-section {
+/* Filter Section */
+.filter-controls {
   display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.filter-buttons {
+  display: flex;
+  gap: 0.5rem;
   flex-wrap: wrap;
-  gap: 1rem;
-  align-items: center;
 }
 
 .filter-section select {
@@ -105,7 +145,7 @@ button:hover {
   min-width: 180px;
 }
 
-/* Transaction List */
+/* Expense List */
 #expense-list {
   list-style: none;
   padding: 0;
@@ -178,7 +218,7 @@ button:hover {
   background-color: #495057;
 }
 
-/* Balance */
+/* Balance Display */
 .balance-section span {
   font-size: 1.6rem;
   color: #1e90ff;
@@ -196,16 +236,17 @@ footer {
 
 /* Responsive */
 @media (max-width: 600px) {
-  form {
+  .filter-buttons {
     flex-direction: column;
-  }
-
-  .filter-section {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  button {
     width: 100%;
+  }
+
+  .filter-buttons button {
+    width: 100%;
+  }
+
+  .type-toggle {
+    flex-direction: column;
+    gap: 0.3rem;
   }
 }

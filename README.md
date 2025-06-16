@@ -23,9 +23,9 @@ This is a simple and responsive **Expense Tracker** application built using **HT
 
 | Desktop View | Mobile View |
 |--------------|-------------|
-| ![Desktop](screenshots/desktop.png) | ![Mobile](screenshots/mobile.png) |
+| ![Desktop](<img width="944" alt="expense" src="https://github.com/user-attachments/assets/d4eba2a1-cf60-40fa-af2c-57a7ee030532" />) | ![Mobile](screenshots/mobile.png) |
 
-<img width="944" alt="expense" src="https://github.com/user-attachments/assets/d4eba2a1-cf60-40fa-af2c-57a7ee030532" />
+
 
 
 ---
@@ -34,7 +34,7 @@ This is a simple and responsive **Expense Tracker** application built using **HT
 
 - **HTML5** – Semantic structure
 - **CSS3** – Flexbox, Grid, media queries for responsiveness
-- **JavaScript (ES6)** – DOM manipulation, data storage, filtering
+- **JavaScript** – DOM manipulation, data storage, filtering
 
 ---
 

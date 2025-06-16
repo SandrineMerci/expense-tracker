@@ -1,118 +1,96 @@
-/* Base and Layout */
+/* Reset & Base */
 * {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 html, body {
-  margin: 0;
-  padding: 0;
   height: 100%;
   font-family: 'Segoe UI', sans-serif;
-  background-color: #f0f2f5;
+  background-color: #f4f6f8;
   display: flex;
   flex-direction: column;
+  color: #333;
 }
 
+/* Header */
 header {
-  background-color: #007BFF;
+  background-color: #1e90ff;
   color: white;
   padding: 1.5rem;
   text-align: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
+/* Layout */
 main {
   flex: 1;
-  padding: 1rem;
-  max-width: 900px;
+  padding: 2rem 1rem;
+  max-width: 960px;
   margin: auto;
   display: grid;
-  gap: 1.5rem;
+  gap: 2rem;
 }
 
-/* Section Styling */
+/* Section Cards */
 section {
-  background-color: white;
-  border-radius: 8px;
-  padding: 1rem;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  background: white;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
 }
 
+/* Titles */
 h2 {
   margin-bottom: 1rem;
-  color: #333;
+  font-size: 1.3rem;
+  border-left: 5px solid #1e90ff;
+  padding-left: 0.5rem;
 }
 
 /* Form */
 form {
   display: flex;
-  flex-wrap: wrap;
-  gap: 0.5rem;
+  flex-direction: column;
+  gap: 0.8rem;
 }
 
-input {
-  padding: 0.5rem;
+input, select {
+  padding: 0.6rem;
+  width: 100%;
+  min-width: 300px;
   border: 1px solid #ccc;
-  border-radius: 5px;
-  flex: 1 1 200px;
+  border-radius: 8px;
+  font-size: 1rem;
+}
+
+input::placeholder {
+  font-size: 0.95rem;
+  color: #666;
+}
+
+input:focus, select:focus {
+  border-color: #1e90ff;
+  outline: none;
 }
 
 button {
-  padding: 0.5rem 1rem;
+  padding: 0.6rem 1.2rem;
   border: none;
-  background-color: #007BFF;
+  background-color: #1e90ff;
   color: white;
-  border-radius: 5px;
+  font-size: 1rem;
+  border-radius: 8px;
   cursor: pointer;
-  flex: 1 1 auto;
+  transition: background-color 0.3s ease;
 }
 
 button:hover {
-  background-color: #0056b3;
+  background-color: #0072cc;
 }
 
-/* Expense List */
-#expense-list {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.expense-item {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background: #f9f9f9;
-  padding: 0.75rem;
-  margin-bottom: 0.5rem;
-  border-left: 6px solid;
-  border-radius: 5px;
-}
-
-.expense-item.income {
-  border-color: green;
-  color: green;
-}
-
-.expense-item.expense {
-  border-color: red;
-  color: red;
-}
-
-.expense-item button {
-  margin-left: 0.5rem;
-  background-color: #6c757d;
-  color: white;
-  border: none;
-  padding: 0.3rem 0.7rem;
-  border-radius: 4px;
-  cursor: pointer;
-}
-
-.expense-item button:hover {
-  background-color: #495057;
-}
-
-/* Filter Section */
+/* Filter section */
 .filter-section {
   display: flex;
   flex-wrap: wrap;
@@ -124,29 +102,110 @@ button:hover {
   padding: 0.5rem;
   border-radius: 5px;
   border: 1px solid #ccc;
+  min-width: 180px;
+}
+
+/* Transaction List */
+#expense-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.expense-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  border-radius: 10px;
+  background-color: #fefefe;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.06);
+  border-left: 6px solid;
+  position: relative;
+  transition: transform 0.2s ease;
+}
+
+.expense-item:hover {
+  transform: translateY(-2px);
+}
+
+.expense-item.income {
+  border-color: #28a745;
+}
+
+.expense-item.expense {
+  border-color: #dc3545;
+}
+
+.expense-item strong {
+  display: inline-block;
+  margin-right: 0.5rem;
+}
+
+.expense-item::before {
+  content: attr(data-type);
+  position: absolute;
+  top: 8px;
+  right: 12px;
+  font-size: 0.75rem;
+  background-color: #e9ecef;
+  padding: 0.2rem 0.5rem;
+  border-radius: 5px;
+  font-weight: bold;
+  color: #555;
+}
+
+.expense-item[data-type="Income"]::before {
+  background-color: #d4edda;
+  color: #155724;
+}
+
+.expense-item[data-type="Expense"]::before {
+  background-color: #f8d7da;
+  color: #721c24;
+}
+
+.expense-item button {
+  margin-left: 0.5rem;
+  background-color: #6c757d;
+  border-radius: 6px;
+  padding: 0.3rem 0.8rem;
+  font-size: 0.9rem;
+}
+
+.expense-item button:hover {
+  background-color: #495057;
+}
+
+/* Balance */
+.balance-section span {
+  font-size: 1.6rem;
+  color: #1e90ff;
+  font-weight: bold;
 }
 
 /* Footer */
 footer {
-  background-color: #007BFF;
+  background-color: #1e90ff;
   color: white;
   text-align: center;
   padding: 1rem;
   margin-top: auto;
 }
 
-/* Responsive Design */
+/* Responsive */
 @media (max-width: 600px) {
   form {
     flex-direction: column;
   }
 
-  button {
-    width: 100%;
-  }
-
   .filter-section {
     flex-direction: column;
     align-items: flex-start;
+  }
+
+  button {
+    width: 100%;
   }
 }

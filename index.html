@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Expense Tracker</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <header>
+    <h1>Expense Tracker</h1>
+  </header>
+
+  <main>
+    <!-- Form Section -->
+    <section class="form-section">
+      <h2>Add New Transaction</h2>
+      <form id="expense-form">
+        <input type="text" id="description" placeholder="Description" required />
+        <input type="number" id="amount" placeholder="Amount (e.g., -500 for expense, +1000 for income)" required />
+        <input type="date" id="date" required />
+        <button type="submit">Add</button>
+      </form>
+    </section>
+
+    <!-- Balance Section -->
+    <section class="balance-section">
+      <h2>Total Balance: <span id="balance">0</span> RWF</h2>
+    </section>
+
+    <!-- Filter Section -->
+    <section class="filter-section">
+      <h2>Filter by Transaction Date</h2>
+      <label for="date-dropdown">Select Date:</label>
+      <select id="date-dropdown">
+        <option value="">-- Show All --</option>
+      </select>
+      <button id="filter-by-date">Apply Filter</button>
+      <button id="reset-filter">Reset</button>
+    </section>
+
+    <!-- Expense List Section -->
+    <section class="list-section">
+      <h2>Transaction History</h2>
+      <ul id="expense-list"></ul>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Expense Tracker</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

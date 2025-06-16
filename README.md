@@ -25,6 +25,9 @@ This is a simple and responsive **Expense Tracker** application built using **HT
 |--------------|-------------|
 | ![Desktop](screenshots/desktop.png) | ![Mobile](screenshots/mobile.png) |
 
+<img width="944" alt="expense" src="https://github.com/user-attachments/assets/d4eba2a1-cf60-40fa-af2c-57a7ee030532" />
+
+
 ---
 
 ## Technologies Used
@@ -39,7 +42,7 @@ This is a simple and responsive **Expense Tracker** application built using **HT
 
 - Filter transactions by selecting a specific date from a dropdown
 - Neatly organized and consistent visual layout
-- Ready to be deployed (compatible with GitHub Pages or Netlify)
+- Ready to be deployed using Vercel
 
 ---
 

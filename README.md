@@ -16,6 +16,9 @@ This is a simple and responsive **Expense Tracker** application built using **HT
 - Semantic HTML5 structure
 - Input validation before submitting
 - Includes a date-based transaction filter dropdown
+- Filter transactions by selecting a specific date from a dropdown
+- Neatly organized and consistent visual layout
+- Ready to be deployed using Vercel
 
 ---
 
@@ -31,14 +34,6 @@ This is a simple and responsive **Expense Tracker** application built using **HT
 - **HTML5** – Semantic structure
 - **CSS3** – Flexbox, Grid, media queries for responsiveness
 - **JavaScript** – DOM manipulation, data storage, filtering
-
----
-
-## Bonus Features
-
-- Filter transactions by selecting a specific date from a dropdown
-- Neatly organized and consistent visual layout
-- Ready to be deployed using Vercel
 
 ---
 
